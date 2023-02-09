@@ -32,6 +32,13 @@ buttonElement.addEventListener('click',function(){
         //aggiungere style 
         divElement.setAttribute("style", "width:calc(100% / 10)");
         console.log(divElement);
+
+        //stampare contenuto celle
+        divElement.innerHTML=num;
+
+        //stampare celle in html
+        grigliaElement.append(divElement);
+        console.log(divElement);
        
         
     }
