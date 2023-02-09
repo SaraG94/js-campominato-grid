@@ -4,14 +4,19 @@ console.log('ciaoo');
 const buttonElement = document.getElementById('pulsante');
 console.log(buttonElement);
 
+//dichiarare griglia
+let grigliaElement = ''
 //al click su play si genera griglia
 
 buttonElement.addEventListener('click',function(){
     console.log('click');
 
+
     //creare griglia
-    const grigliaElement = document.getElementById('griglia');
+    grigliaElement = document.getElementById('griglia');
     console.log(grigliaElement);
+
+    grigliaElement.innerHTML = '';
     
     //definire lato e celle
     let latoGriglia = 10;
@@ -35,21 +40,12 @@ buttonElement.addEventListener('click',function(){
         divElement.setAttribute("style", "width:calc(100% / 10)");
 
         //stampare contenuto celle
-        divElement.innerHTML=num;
+        //divElement.innerHTML=num;
 
         //stampare celle in html
         grigliaElement.append(divElement);
         console.log(divElement);    
-    
 
-        //for (let i = 0; i < celleElements.length; i++) {
-        //   let cella = celleElements[i]
-        //
-        //    //al click sulle celle
-        //    cella.addEventListener('click', function () {
-        //        console.log('ciaoooo')
-        //    })
-        //}
     }
 
     //prendere celle
@@ -58,10 +54,14 @@ buttonElement.addEventListener('click',function(){
 
     for (let i = 0; i < celleElements.length; i++) {
         let cella = celleElements[i];
+        console.log(cella)
 
         //al click sulle celle
         cella.addEventListener('click', function () {
             console.log('sei qui!');
+            
+            //stampare contenuto celle
+            cella.innerHTML='sei qui!';
 
             //aggiungere classe
             cella.classList.add('new-color');

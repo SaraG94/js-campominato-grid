@@ -4,14 +4,19 @@ console.log('ciaoo');
 const buttonElement = document.getElementById('pulsante');
 console.log(buttonElement);
 
+//dichiarare griglia
+let grigliaElement = ''
 //al click su play si genera griglia
 
 buttonElement.addEventListener('click',function(){
     console.log('click');
 
+
     //creare griglia
-    const grigliaElement = document.getElementById('griglia');
+    grigliaElement = document.getElementById('griglia');
     console.log(grigliaElement);
+
+    grigliaElement.innerHTML = '';
     
     //definire lato e celle
     let latoGriglia = 10;
