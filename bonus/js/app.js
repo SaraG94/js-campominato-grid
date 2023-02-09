@@ -63,6 +63,10 @@ buttonElement.addEventListener('click',function(){
         cella.addEventListener('click', function () {
             console.log('sei qui!');
 
+            //aggiungere classe
+            cella.classList.add('new-color');
+            console.log(cella); 
         })
     }
+
 })
