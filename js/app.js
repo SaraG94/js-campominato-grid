@@ -8,6 +8,9 @@ console.log(buttonElement);
 
 buttonElement.addEventListener('click',function(){
     console.log('click');
+
+    const grigliaElement = document.getElementById('griglia');
+    console.log(grigliaElement);
 })
 
 //creare griglia
